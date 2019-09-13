@@ -4,7 +4,11 @@
 
 This repository is a proof of concept demonstrating how the Genesis Framework can work if it were converted to a plugin.
 
-See the [Genesis Parent Theme](https://github.com/seothemes/genesis-parent-theme) for a compatible parent theme.
+## Installation
+
+1. Download and install this plugin - [Genesis as a Plugin](https://github.com/seothemes/genesis-as-a-plugin/archive/master.zip)
+
+2. Download and install this theme - [Genesis Parent Theme](https://github.com/seothemes/genesis-parent-theme/archive/master.zip)
 
 ## Notes
 
