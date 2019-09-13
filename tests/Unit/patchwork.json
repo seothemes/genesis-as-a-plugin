@@ -1,0 +1,10 @@
+{
+	"redefinable-internals": [
+		"file_exists",
+		"file_put_contents",
+		"function_exists",
+		"stripslashes",
+		"time",
+		"date"
+	]
+}

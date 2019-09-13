@@ -1,0 +1,55 @@
+{
+	"name": "studiopress/genesis",
+	"type": "wordpress-theme",
+	"description": "The Genesis Framework for WordPress",
+	"homepage": "https://my.studiopress.com/themes/genesis/",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": "^5.6 || ^7",
+		"composer/installers": "^1"
+	},
+	"require-dev": {
+		"brain/monkey": "^2",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+		"phpcompatibility/phpcompatibility-wp": "^2",
+		"phpunit/phpunit": "^5",
+		"roave/security-advisories": "dev-master",
+		"wp-coding-standards/wpcs": "^2",
+		"wp-cli/i18n-command": "^2.1"
+	},
+	"config": {
+		"sort-order": true
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"StudioPress\\Genesis\\Tests\\": "tests/"
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"scripts": {
+		"install-codestandards": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+		"integration-test": "phpunit --testsuite integration --configuration tests/Unit/phpunit.xml.dist",
+		"lint": [
+		  "@lint:php",
+		  "@lint:xml"
+		],
+		"lint:php": "bash bin/php-lint",
+		"lint:xml": "bash bin/xml-lint",
+		"phpcs": "phpcs --basepath=.",
+		"phpcs-changed": "./bin/phpcs-changed.sh",
+		"phpcs:fix": "phpcbf",
+		"system-test": "phpunit --testsuite system",
+		"test": [
+			"@unit-test",
+			"@integration-test",
+			"@system-test"
+		],
+		"unit-test": "phpunit --testsuite unit --configuration tests/Unit/phpunit.xml.dist",
+		"makepot": "wp i18n make-pot . lib/languages/genesis.pot --headers='{ \"Report-Msgid-Bugs-To\": \"StudioPress <translations@studiopress.com>\" }' --exclude=bin/ --quiet"
+	},
+	"support": {
+		"issues": "https://github.com/studiopress/genesis/issues",
+		"source": "https://github.com/studiopress/genesis"
+	}
+}

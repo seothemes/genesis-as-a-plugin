@@ -1,0 +1,33 @@
+# Default behavior
+* text=auto
+
+# Text files
+*.php text
+*.css text
+*.js text
+*.md text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+
+# Exclude when zipping
+.github/ export-ignore
+bin/ export-ignore
+docs/ export-ignore
+tests/ export-ignore
+.editorconfig export-ignore
+.eleventy.js export-ignore
+.eslintignore export-ignore
+.eslintrc.json export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+composer.json export-ignore
+Gruntfile.js export-ignore
+package.json export-ignore
+package-lock.json export-ignore
+phpcs.xml.dist export-ignore
+phpunit.xml.dist export-ignore
+webpack.config.js export-ignore
